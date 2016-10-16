@@ -1,0 +1,14 @@
+.featImageDisplay {
+  width: 600px;
+  height: 400px;
+  background-color: #eee;
+  background-size: cover;
+  font-size: 30px;
+  color: #aaa;
+  text-align: center;
+  line-height: 400px;
+}
+
+.list-group-item {
+  font-size: 18px;
+}

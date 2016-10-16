@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Photo Album Angular</title>
+  </head>
+  <body ng-app='photoAlbum'>
+    <div class='jumbotron'>
+      <div class='container'>
+        <h1>Photo Album</h1>
+      </div>
+    </div>
+
+    <div class='container' ng-controller='ImagesController'>
+      <div class='row'>
+
+        <div class='col-md-4' >
+          <ul class='list-group'>
+            <li class='list-group-item' ng-repeat='image in images' ng-click='display(image)'>
+              <span class="imageName">{{image.name}}</span>
+              <span class="badge">{{image.rating}}</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class='col-md-5 col-md-offset-1'>
+          <div class='featImageDisplay' style="background-image: url({{featImage.url}})">
+          <-- click an image
+          </div>
+          <div class='featImageName'>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="controllers/ImagesController.js"></script>
+    <script src="data/data.js"></script>
+    <script src="app.js"></script>
+
+    <link rel='stylesheet' href='styles/styles.css'>
+    <link rel='stylesheet' href="bower_components/bootstrap/dist/css/bootstrap.css">
+  </body>
+</html>
