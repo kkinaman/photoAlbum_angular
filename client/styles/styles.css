@@ -24,3 +24,21 @@
 .rightAlign {
   float: right;
 }
+
+.newImageForm {
+  padding: 10px 30px;
+  margin-bottom: 10px;
+  text-align: right;
+  background-color: #eee;
+}
+.newImageForm label {
+  padding-right: 10px;
+}
+
+form h4 {
+  color: #333;
+}
+
+.dropdown {
+  padding-top: 10px;
+}
