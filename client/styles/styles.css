@@ -9,6 +9,18 @@
   line-height: 400px;
 }
 
+.featImageRating {
+  font-size: 18px;
+}
+
 .list-group-item {
   font-size: 18px;
+}
+
+.leftAlign {
+  float: left;
+}
+
+.rightAlign {
+  float: right;
 }

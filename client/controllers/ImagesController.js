@@ -5,7 +5,7 @@ angular.module('photoAlbum.images', [])
   $scope.featImage = {};
   $scope.display = function(image) {
     $('.featImageDisplay').text('');
-    console.log(image);
     $scope.featImage = image;
+    $('.featImageRating').text($scope.featImage.rating + ' out of 5');
   };
 });
