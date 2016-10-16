@@ -2,13 +2,23 @@
   "name": "photo-album-angular",
   "version": "1.0.0",
   "description": "Practicing angular",
-  "main": "app.js",
+  "main": "server.js",
+  "engines": {
+    "node": ">=4.0.0"
+  },
   "scripts": {
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "angular"
   ],
   "author": "Karina Kinaman",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "nodemon": "^1.11.0"
+  }
 }
