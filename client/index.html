@@ -14,6 +14,18 @@
       <div class='row'>
 
         <div class='col-md-4' >
+
+          <form id='submitForm' class='newImageForm'>
+            <h4>Add your own image!</h4>
+            <div class="form-group">
+              <label for="title">Image Title</label><input type='text' name='title' ng-model='addImageTitle'/>
+            </div>
+            <div class="form-group">
+              <label for="url">Url</label><input type='text' name='url' ng-model='addImageUrl'/>
+            </div>
+            <button type="submit" class="btn btn-default" ng-click='addNewImage()'>Submit</button>
+          </form>
+
           <ul class='list-group'>
             <li class='list-group-item' ng-repeat='image in images | orderBy : "rating" : true' ng-click='display(image)'>
               <span class="imageName">{{image.name}}</span>
@@ -29,8 +41,19 @@
           <div class='col-md-5'>
             <h3><span class="featImageName leftAlign">{{featImage.name}}</span></h3>
           </div>
-          <div class='col-md-3'>
+          <div class='col-md-2'>
             <h3><span class="featImageRating rightAlign"></span></h3>
+          </div>
+          <div class='col-md-3 col-md-offset-1'>
+            <div class="dropdown hidden">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Rating
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropup" aria-labelledby="dropdownMenu1">
+                <li ng-repeat="i in [5, 4, 3, 2, 1]"><a href="#" ng-click='changeRating(i)'>{{i}}</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -38,6 +61,7 @@
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="controllers/ImagesController.js"></script>
     <script src="data/data.js"></script>
     <script src="app.js"></script>
