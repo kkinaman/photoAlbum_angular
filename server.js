@@ -8,7 +8,14 @@ var path = require('path');
 
 var app = express();
 
-mongoose.connect('mongodb://localhost/photoAlbum');
+mongoose.connect('mongodb://localhost:27017/photos');
+
+var db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log('db is open!');
+});
 
 app.use(express.static(__dirname + '/client'));
 app.use(morgan('dev'));

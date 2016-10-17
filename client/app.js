@@ -1,5 +1,6 @@
 angular.module('photoAlbum', [
   'photoAlbum.images',
+  'photoAlbum.services',
   'ngRoute'
 ])
 .config(function($routeProvider){
