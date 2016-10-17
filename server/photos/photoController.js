@@ -20,6 +20,7 @@ module.exports = {
 
   newPhoto: function(res, req, next) {
     console.log('IN PHOTO CONTROLLER, ADDING PHOTO TO DB');
+    console.log(req.body);
     createPhoto(req.body)
       .then(function(createdPhoto) {
         if (createdPhoto) {

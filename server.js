@@ -27,4 +27,4 @@ require('./server/config/routes.js')(app, express);
 console.log('Listening on port 8000');
 app.listen(8000);
 
-module.exports = app;
+exports.app = app;
